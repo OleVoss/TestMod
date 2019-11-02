@@ -9,12 +9,14 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
+
 @Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD)
 public class Register {
 	
 	@SubscribeEvent
-	public static void registerItem(final RegistryEvent<Item> event) {
-		ItemList.TEST_ITEM = new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName(location("test_item"));
+	public static void registerItem(final RegistryEvent.Register<Item> event) {
+		event.getRegistry().registerAll(ItemList.TEST_ITEM = new Item(new Item.Properties().group(ItemGroup.MISC))
+				.setRegistryName(location("test_item")));
 	}
 	
 	
