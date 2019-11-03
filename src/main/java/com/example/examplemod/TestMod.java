@@ -1,7 +1,7 @@
 package com.example.examplemod;
 
-import com.example.examplemod.lists.items.ModBlocks;
-import com.example.examplemod.lists.items.ModItems;
+import com.example.examplemod.lists.ModBlocks;
+import com.example.examplemod.lists.ModItems;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -18,13 +18,14 @@ import net.minecraftforge.fml.common.Mod;
 public class TestMod
 {
    public static final String MOD_ID = "testmod";
+   public static final ItemGroup MOD_GROUP = new ItemModGroup();
     @Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD)
     public static class RegistryEvents {
         @SubscribeEvent
         public static void onItemRegistry(final RegistryEvent.Register<Item> event) {
             event.getRegistry().registerAll(
-            		ModItems.test_item = new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName(location("test_item")),
-            		ModItems.test_ore = new BlockItem(ModBlocks.test_ore, new Item.Properties().group(ItemGroup.MISC)).setRegistryName(location("test_ore"))
+            		ModItems.test_item = new Item(new Item.Properties().group(TestMod.MOD_GROUP)).setRegistryName(location("test_item")),
+            		ModItems.test_ore = new BlockItem(ModBlocks.test_ore, new Item.Properties().group(TestMod.MOD_GROUP)).setRegistryName(ModBlocks.test_ore.getRegistryName())
             		);
             
         }

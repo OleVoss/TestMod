@@ -1,4 +1,4 @@
-package com.example.examplemod.lists.items;
+package com.example.examplemod.lists;
 
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
