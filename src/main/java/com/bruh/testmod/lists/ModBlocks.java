@@ -1,4 +1,4 @@
-package com.example.examplemod.lists;
+package com.bruh.testmod.lists;
 
 import net.minecraft.block.Block;
 

@@ -1,13 +1,15 @@
-package com.example.examplemod;
+package com.bruh.testmod;
 
-import com.example.examplemod.lists.ModBlocks;
-import com.example.examplemod.lists.ModItems;
+import com.bruh.testmod.lists.ModBlocks;
+import com.bruh.testmod.lists.ModItems;
+import com.bruh.testmod.lists.ModToolMaterials;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.item.SwordItem;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -25,7 +27,10 @@ public class TestMod
         public static void onItemRegistry(final RegistryEvent.Register<Item> event) {
             event.getRegistry().registerAll(
             		ModItems.test_item = new Item(new Item.Properties().group(TestMod.MOD_GROUP)).setRegistryName(location("test_item")),
+            		ModItems.test_sword = new SwordItem(ModToolMaterials.TEST_SWORD, 0, 0, new Item.Properties().group(TestMod.MOD_GROUP)).setRegistryName(location("test_sword")),
+            		
             		ModItems.test_ore = new BlockItem(ModBlocks.test_ore, new Item.Properties().group(TestMod.MOD_GROUP)).setRegistryName(ModBlocks.test_ore.getRegistryName())
+            		
             		);
             
         }

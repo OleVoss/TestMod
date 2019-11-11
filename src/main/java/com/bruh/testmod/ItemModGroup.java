@@ -1,8 +1,7 @@
-package com.example.examplemod;
+package com.bruh.testmod;
 
-import com.example.examplemod.lists.ModItems;
+import com.bruh.testmod.lists.ModItems;
 
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 

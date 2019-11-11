@@ -1,10 +1,11 @@
-package com.example.examplemod.lists;
+package com.bruh.testmod.lists;
 
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.Item;
 import net.minecraft.item.crafting.Ingredient;
 
 public enum ModToolMaterials implements IItemTier{
+	TEST_SWORD(12f, 2f, 1000, 4, 25, ModItems.test_item);
 	;
 	private float attackDamage, efficiency;
 	private int durability, harvestlevel, enchantability;
