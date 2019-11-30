@@ -5,7 +5,8 @@ import net.minecraft.item.Item;
 import net.minecraft.item.crafting.Ingredient;
 
 public enum ModToolMaterials implements IItemTier{
-	TEST_SWORD(12f, 2f, 1000, 4, 25, ModItems.test_item);
+	TEST_SWORD(12f, 2f, 1000, 4, 25, ModItems.test_item),
+	TEST_STUFF(1f, 1f, 500, 0, 0, ModItems.test_staff);
 	;
 	private float attackDamage, efficiency;
 	private int durability, harvestlevel, enchantability;
